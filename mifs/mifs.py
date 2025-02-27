@@ -232,7 +232,7 @@ class MutualInformationFeatureSelector(BaseEstimator, SelectorMixin):
         # ---------------------------------------------------------------------
 
         self.n_features_ = len(S)
-        self._support_mask = np.zeros(p, dtype=np.bool_)
+        self._support_mask = np.zeros(p, dtype=bool)
         self._support_mask[S] = True
         self.ranking_ = S
         self.mi_ = S_mi
